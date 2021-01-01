@@ -1,0 +1,35 @@
+# Ant
+# Build your Java projects and run tests with Apache Ant.
+# Add steps that save build artifacts and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/java
+
+trigger:
+- none
+
+pool:
+  vmImage: 'windows-latest'
+
+steps:
+- task: Ant@1
+  displayName: Execute JMeter script
+  inputs: 
+    options: -Dusers=$(users); -Drampup=$(rampup); -Dduration=$(duration)
+    buildFile: 'build-load.xml' 
+    publishJUnitResults: false 
+    javaHomeOption: 'JDKVersion' # Options: jDKVersion, path
+
+- task: CmdLine@2
+  displayName: Prepare test results
+  inputs:
+    script: |
+      cd D:\a\1\s\results\html
+      dir
+      powershell -command "\"$(Get-Content APITestingSF.html)\" > report.html".
+
+- task: FileContenttoVariable@2
+  displayName: Set test results as variable
+  inputs:
+    FilePath: 'D:\a\1\s\results\html\report.html'
+    VariableName: 'html'
+    AddNewlines: false
+   
