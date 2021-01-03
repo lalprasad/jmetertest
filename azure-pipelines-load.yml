@@ -26,6 +26,6 @@ steps:
         script: jmeter -n -t Endurance_Test.jmx -Jresdir= add-variables-and-reporting-pagenumber.csv -l report/enduranceresults.jtl -e -o /report
     - task: PublishBuildArtifacts@1
       inputs:
-        PathtoPublish: /
+        PathtoPublish: jmeter
         ArtifactName: jmeter
         publishLocation: Container
