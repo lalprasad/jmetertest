@@ -10,26 +10,22 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
-- task: Ant@1
-  displayName: Execute JMeter script
-  inputs: 
-    options: -Dusers=$(users); -Drampup=$(rampup); -Dduration=$(duration)
-    buildFile: 'build-load.xml' 
-    publishJUnitResults: false 
-    javaHomeOption: 'JDKVersion' # Options: jDKVersion, path
-
-- task: CmdLine@2
-  displayName: Prepare test results
-  inputs:
-    script: |
-      cd D:\a\1\s\results\html
-      dir
-      powershell -command "\"$(Get-Content APITestingSF.html)\" > report.html".
-
-- task: FileContenttoVariable@2
-  displayName: Set test results as variable
-  inputs:
-    FilePath: 'D:\a\1\s\results\html\report.html'
-    VariableName: 'html'
-    AddNewlines: false
-   
+  - job: InstallJmeter
+    displayName: Install Jmeter Tool
+    pool:
+      vmImage: ubuntu-latest
+    steps:
+    - task: JMeterInstaller@0
+      inputs:
+        jmeterVersion: 5.2.1
+  
+    - task: Bash@3
+      displayName: Run Endurance Test
+      inputs:
+        targetType: inline
+        script: jmeter -n -t Endurance_Test.jmx -Jresdir= add-variables-and-reporting-pagenumber.csv -l report/enduranceresults.jtl -e -o /report
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: /
+        ArtifactName: jmeter
+        publishLocation: Container
