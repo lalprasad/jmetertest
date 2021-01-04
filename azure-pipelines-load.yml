@@ -26,7 +26,7 @@ stages:
         displayName: Run Jmeter Sample Test
         inputs:
           targetType: inline
-          script: jmeter -n -t automatedtesting/jmeter/Starter_1.jmx -Jresdir=automatedtesting/jmeter/end_test.csv -l automatedtesting/jmeter/report/Starter_results.jtl -e -o automatedtesting/jmeter/Starter
+          script: jmeter -n -t automatedtesting/jmeter/add-variables-and-reporting.jmx -Jresdir=automatedtesting/jmeter/add-variables-and-reporting-pagenumber.csv -l automatedtesting/jmeter/report/add-variables-and-reporting-pagenumber.jtl -e -o automatedtesting/jmeter/Starter
 
       - task: PublishBuildArtifacts@1
         inputs:
