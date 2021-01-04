@@ -9,12 +9,12 @@ stages:
 - stage: Build
   displayName: Build
 
-steps:
-  - job: InstallJmeter
-    displayName: Install Jmeter Tool
-    pool:
-      vmImage: ubuntu-latest
-    steps:
+  steps:
+    - job: InstallJmeter
+      displayName: Install Jmeter Tool
+      pool:
+        vmImage: ubuntu-latest
+  steps:
     - task: JMeterInstaller@0
       inputs:
         jmeterVersion: 5.2.1
@@ -24,8 +24,8 @@ steps:
   #    inputs:
    #     targetType: inline
     #    script: jmeter -n -t Endurance_Test.jmx -Jresdir= add-variables-and-reporting-pagenumber.csv -l report/enduranceresults.jtl -e -o /report
-    - task: PublishBuildArtifacts@1
-      inputs:
-        PathtoPublish: jmeter
-        ArtifactName: jmeter
-        publishLocation: Container
+   # - task: PublishBuildArtifacts@1
+    #  inputs:
+     #   PathtoPublish: jmeter
+      #  ArtifactName: jmeter
+       # publishLocation: Container
