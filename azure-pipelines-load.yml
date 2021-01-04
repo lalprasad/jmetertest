@@ -9,7 +9,7 @@ stages:
 - stage: Build
   displayName: Build
 
-  steps:
+  jobs:
     - job: InstallJmeter
       displayName: Install Jmeter Tool
       pool:
