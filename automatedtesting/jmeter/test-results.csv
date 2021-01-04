@@ -1,0 +1,21 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1609769276311,1388,GET Users,200,OK,Endurance Test 1-10,text,true,,3125,168,20,20,http://dummy.restapiexample.com/api/v1/employees?page=10,1331,0,2
+1609769275917,1807,GET Users,200,OK,Endurance Test 1-2,text,true,,3125,167,19,19,http://dummy.restapiexample.com/api/v1/employees?page=2,1750,0,42
+1609769275853,1877,GET Users,200,OK,Endurance Test 1-1,text,true,,3125,167,18,18,http://dummy.restapiexample.com/api/v1/employees?page=1,1823,0,106
+1609769275963,1948,GET Users,429,Too Many Requests,Endurance Test 1-3,text,false,,19691,167,17,17,http://dummy.restapiexample.com/api/v1/employees?page=3,1829,0,3
+1609769276402,2134,GET Users,429,Too Many Requests,Endurance Test 1-12,text,false,,19691,168,16,16,http://dummy.restapiexample.com/api/v1/employees?page=12,2025,0,3
+1609769276200,3122,GET Users,200,OK,Endurance Test 1-8,text,true,,3125,167,15,15,http://dummy.restapiexample.com/api/v1/employees?page=8,3071,0,2
+1609769276359,2982,GET Users,200,OK,Endurance Test 1-11,text,true,,3125,168,14,14,http://dummy.restapiexample.com/api/v1/employees?page=11,2924,0,3
+1609769276452,2893,GET Users,200,OK,Endurance Test 1-13,text,true,,3125,168,13,13,http://dummy.restapiexample.com/api/v1/employees?page=13,2837,0,3
+1609769276114,3231,GET Users,200,OK,Endurance Test 1-6,text,true,,3125,167,13,13,http://dummy.restapiexample.com/api/v1/employees?page=6,3182,0,2
+1609769276800,2622,GET Users,200,OK,Endurance Test 1-20,text,true,,3125,168,11,11,http://dummy.restapiexample.com/api/v1/employees?page=20,2566,0,3
+1609769276604,2847,GET Users,429,Too Many Requests,Endurance Test 1-16,text,false,,19691,168,10,10,http://dummy.restapiexample.com/api/v1/employees?page=16,2732,0,2
+1609769276558,2918,GET Users,429,Too Many Requests,Endurance Test 1-15,text,false,,19694,168,9,9,http://dummy.restapiexample.com/api/v1/employees?page=15,2799,0,4
+1609769276705,2819,GET Users,429,Too Many Requests,Endurance Test 1-18,text,false,,19696,168,8,8,http://dummy.restapiexample.com/api/v1/employees?page=18,2703,0,3
+1609769276751,2802,GET Users,429,Too Many Requests,Endurance Test 1-19,text,false,,19696,168,7,7,http://dummy.restapiexample.com/api/v1/employees?page=19,2683,0,3
+1609769276649,2930,GET Users,429,Too Many Requests,Endurance Test 1-17,text,false,,19696,168,6,6,http://dummy.restapiexample.com/api/v1/employees?page=17,2814,0,3
+1609769276161,3429,GET Users,429,Too Many Requests,Endurance Test 1-7,text,false,,19688,167,5,5,http://dummy.restapiexample.com/api/v1/employees?page=7,3312,0,3
+1609769276250,4052,GET Users,200,OK,Endurance Test 1-9,text,true,,3125,167,4,4,http://dummy.restapiexample.com/api/v1/employees?page=9,3997,0,3
+1609769276506,3807,GET Users,200,OK,Endurance Test 1-14,text,true,,3125,168,3,3,http://dummy.restapiexample.com/api/v1/employees?page=14,3756,0,3
+1609769276000,4368,GET Users,429,Too Many Requests,Endurance Test 1-4,text,false,,19693,167,2,2,http://dummy.restapiexample.com/api/v1/employees?page=4,4258,0,3
+1609769276050,4357,GET Users,429,Too Many Requests,Endurance Test 1-5,text,false,,19688,167,1,1,http://dummy.restapiexample.com/api/v1/employees?page=5,4237,0,4
