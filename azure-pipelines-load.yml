@@ -15,9 +15,12 @@ stages:
       pool:
         vmImage: ubuntu-latest
   
-    - task: JMeterInstaller@0
-      inputs:
-        jmeterVersion: 5.2.1
+
+
+      steps:
+      - task: JMeterInstaller@0
+        inputs:
+          jmeterVersion: 5.2.1
   
 #    - task: Bash@3
  #     displayName: Run Endurance Test
