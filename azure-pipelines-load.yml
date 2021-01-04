@@ -31,5 +31,5 @@ stages:
       - task: PublishBuildArtifacts@1
         inputs:
           PathtoPublish: automatedtesting/jmeter
-          ArtifactName: jmeter_1
+          ArtifactName: jmeter
           publishLocation: Container
