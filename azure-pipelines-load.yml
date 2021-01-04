@@ -6,8 +6,6 @@
 trigger:
 - none
 
-pool:
-  vmImage: 'windows-latest'
 
 steps:
   - job: InstallJmeter
@@ -19,11 +17,11 @@ steps:
       inputs:
         jmeterVersion: 5.2.1
   
-    - task: Bash@3
-      displayName: Run Endurance Test
-      inputs:
-        targetType: inline
-        script: jmeter -n -t Endurance_Test.jmx -Jresdir= add-variables-and-reporting-pagenumber.csv -l report/enduranceresults.jtl -e -o /report
+#    - task: Bash@3
+ #     displayName: Run Endurance Test
+  #    inputs:
+   #     targetType: inline
+    #    script: jmeter -n -t Endurance_Test.jmx -Jresdir= add-variables-and-reporting-pagenumber.csv -l report/enduranceresults.jtl -e -o /report
     - task: PublishBuildArtifacts@1
       inputs:
         PathtoPublish: jmeter
