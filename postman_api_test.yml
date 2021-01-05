@@ -21,13 +21,13 @@ jobs:
     displayName: Run Api Tests
     inputs:
       script: >+
-        newman run StarterAPIs.postman_collection.json -e Walkthrough_StarterAPIs.postman_environment.json --reporters cli,junit --reporter-junit-export result.xml
+        newman run automationtest/postman/StarterAPIs.postman_collection.json -e automationtest/postman/Walkthrough_StarterAPIs.postman_environment.json --reporters cli,junit --reporter-junit-export automationtest/postman/result.xml
 
-      workingDirectory: postman
+      #workingDirectory: postman
   - task: PublishBuildArtifacts@1
     displayName: Publish Artifact - Postman test
     inputs:
-      PathtoPublish: postman
+      PathtoPublish: automationtest/postman
       ArtifactName: Postman test
   - task: PublishTestResults@1
     displayName: 'Publish Test Results '
