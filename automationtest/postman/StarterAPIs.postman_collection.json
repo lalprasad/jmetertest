@@ -91,15 +91,11 @@
 							"    pm.expect(pm.response.text()).to.include(\"success\");",
 							"});",
 							"",
-							"pm.test(\"Body contains es\", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"tes\");",
+							"pm.test(\"Body contains Message\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"message\");",
 							"});",
 							"",
-							"pm.test(\"Verify Employee\", function() {",
-							"    var jsonData = pm.response.json();",
-							"    pm.expect(jsonData.data.employee_name).to.equal(pm.variables.get(\"name\"));",
-							"    pm.expect(jsonData.data.employee_salary).to.equal(pm.variables.get(\"salary\"))",
-							"});"
+							""
 						],
 						"type": "text/javascript"
 					}
