@@ -23,10 +23,10 @@ stages:
           jmeterVersion: 5.2.1
   
       - task: Bash@3
-        displayName: Run Jmeter Sample Test
+        displayName: Run Endurance Test
         inputs:
           targetType: inline
-          script: jmeter -n -t automatedtesting/jmeter/add-variables-and-reporting.jmx -Jresdir=automatedtesting/jmeter/add-variables-and-reporting-pagenumber.csv -l automatedtesting/jmeter/report/add-variables-and-reporting-pagenumber.jtl -e -o automatedtesting/jmeter/add-variables-and-reporting-pagenumber
+          script: jmeter -n -t automatedtesting/jmeter/Ensurance_Final.jmx -Jresdir=automatedtesting/jmeter/book_ids -l automatedtesting/jmeter/report/Endurance_Test_Final.jtl -e -o automatedtesting/jmeter/Endurance_Test_Results
 
       - task: PublishBuildArtifacts@1
         inputs:
