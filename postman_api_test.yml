@@ -21,7 +21,7 @@ jobs:
     displayName: Run Api Tests
     inputs:
       script: >+
-        newman run automationtest/postman/StarterAPIs.postman_collection.json -e automationtest/postman/Walkthrough_StarterAPIs.postman_environment.json --reporters cli,junit --reporter-junit-export automationtest/postman/result.xml
+        newman run automationtest/postman/StarterAPIs.postman_collection.json -e automationtest/postman/Walkthrough_StarterAPIs.postman_environment.json --reporters cli,junit --reporter-junit-export automationtest/postman/result.xml || true
 
       #workingDirectory: postman
   - task: PublishBuildArtifacts@1
