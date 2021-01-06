@@ -1,10 +1,8 @@
 {
-	"variables": [],
 	"info": {
-		"name": "StarterAPIs",
-		"_postman_id": "7ce39421-d726-204c-efe6-fcee5a8b97fc",
-		"description": "",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"_postman_id": "b9ddb2d7-c9d1-4dd7-bf56-c504a4df47dd",
+		"name": "StarterAPIs Copy 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
@@ -23,14 +21,19 @@
 				}
 			],
 			"request": {
-				"url": "{{url}}/api/v1/employees",
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"description": ""
+				"url": {
+					"raw": "{{url}}/api/v1/employees",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"employees"
+					]
+				}
 			},
 			"response": []
 		},
@@ -57,14 +60,20 @@
 				}
 			],
 			"request": {
-				"url": "{{url}}/api/v1/employee/{{id_get}}",
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"description": ""
+				"url": {
+					"raw": "{{url}}/api/v1/employee/{{id_get}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"employee",
+						"{{id_get}}"
+					]
+				}
 			},
 			"response": []
 		},
@@ -94,14 +103,23 @@
 				}
 			],
 			"request": {
-				"url": "{{url}}/api/v1/create",
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"employee_name\": \"{{name}}\",\n    \"employee_salary\": \"{{salary}}\",\n    \"employee_age\": \"{{age}}\"\n}"
 				},
-				"description": ""
+				"url": {
+					"raw": "{{url}}/api/v1/create",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"create"
+					]
+				}
 			},
 			"response": []
 		}
